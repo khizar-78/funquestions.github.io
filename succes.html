@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funny Questions</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Funny Questions</h1>
+	<p>Answer the following questions and check the boxes at the end to see your score!</p>
+
+	<form>
+		<h2>Question 1</h2>
+		<p>What do you call a bear with no teeth?</p>
+		<label>
+			<input type="radio" name="q1" value="a">
+			A gummy bear
+		</label><br>
+		<label>
+			<input type="radio" name="q1" value="b">
+			A toothless bear
+		</label><br>
+		<label>
+			<input type="radio" name="q1" value="c">
+			A gum bear
+		</label><br>
+
+		<h2>Question 2</h2>
+		<p>Why did the tomato turn red?</p>
+		<label>
+			<input type="radio" name="q2" value="a">
+			Because it was embarrassed
+		</label><br>
+		<label>
+			<input type="radio" name="q2" value="b">
+			Because it saw the salad dressing
+		</label><br>
+		<label>
+			<input type="radio" name="q2" value="c">
+			Because it was ripe
+		</label><br>
+
+		<h2>Question 3</h2>
+		<p>Why don't scientists trust atoms?</p>
+		 <label>
+			<input type="radio" name="q3" value="a">
+			Because they make up everything
+		</label><br>
+		<label>
+			<input type="radio" name="q3" value="b">
+			Because they're too small to see
+		</label><br>
+		<label>
+			<input type="radio" name="q3" value="c">
+			Because they're always splitting up
+		</label><br>
+	</form>
+
+	<button type="button" onclick="calculateScore()">Check My Score!</button>
+
+	<script>
+		function calculateScore() {
+			// Get the user's answers
+			var q1 = document.querySelector('input[name="q1"]:checked').value;
+			var q2 = document.querySelector('input[name="q2"]:checked').value;
+			var q3 = document.querySelector('input[name="q3"]:checked').value;
+
+			// Calculate the user's score
+			var score = 0;
+			if (q1 == "a") {
+				score += 1;
+			}
+			if (q2 == "c") {
+				score += 1;
+			}
+			if (q3 == "a") {
+				score += 1;
+			}
+
+			// Display the user's score
+			alert("You scored " + score + " out of 3!");
+		}
+	</script>
+
+</body>
+</html>
